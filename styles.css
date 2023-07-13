@@ -1,5 +1,7 @@
 body {
     font-family: "Montserrat", sans-serif;
+    background: radial-gradient(closest-side, #ff4d00, #ffbc12, #f69d3c);
+    font-size: 30px;
 }
 section {
     text-align: center;
@@ -10,13 +12,99 @@ section {
     width: 306px;
     margin: 50px auto;
 }
+h1 {
+    color: red
+}
+
+h2 {
+    color: red
+}
+
+h1:hover{
+    color: White ;
+    font-size: 50px;
+    transition: color 0.5s;
+    transition: font-size 0.5s;
+}
+
+h2:hover{
+    color: white ;
+    font-size: 50px;
+    transition: color 0.5s;
+    transition: font-size 0.5s;
+}
+
 .cell {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Ariel", cursive;
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 0 1px #ff0000;
-    border: 3px solid #ffe10081;
+    border: 3px solid red;
     cursor: pointer;
 line-height: 100px;
     font-size: 60px;
+}
+
+button {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(255,0,0);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(255,0,0);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+button span {
+  margin: 10px;
+}
+
+button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+button:hover {
+  color: #fff;
+  border: 1px solid rgb(255,0,0);
+}
+
+button:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(255, 0, 0);
+}
+
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+	border-top: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+	border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+	border-right: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+	border-bottom: none;
 }
