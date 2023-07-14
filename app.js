@@ -97,3 +97,6 @@ function handleRestartGame() {
   statusDisplay.innerHTML = currentPlayerTurn();
   document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
 }
+
+// perhaps some adding of computer logic would improve the app
+// computer can choose random free block or tactical decisions
